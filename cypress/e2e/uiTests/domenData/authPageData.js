@@ -1,0 +1,1 @@
+export const authPageUrl = "https://bluelight.inc/auth"

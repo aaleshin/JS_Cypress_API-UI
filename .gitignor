@@ -1,0 +1,19 @@
+# Node artifact files
+node_modules/
+dist/
+
+# Log files
+*.log
+*.html
+
+# JetBrains IDE
+.idea/
+
+# Cypress
+videos/
+screenshots/
+downloads/
+
+# Allure reports
+allure-results/
+allure-report/

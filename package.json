@@ -1,0 +1,43 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@shelex/cypress-allure-plugin": "^2.5.0",
+    "cypress": "^13.6.0",
+    "cypress-recurse": "^1.35.2",
+    "playwright-webkit": "^1.30.0"
+  },
+  "name": "frontend_js",
+  "description": "QA tests",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy_metamask": "synpress open --configFile cypress.config.js",
+    "cy_open": "cypress open --env allure=true",
+    "cy_run:api": "cypress run --spec cypress/e2e/apiTests/ --env allure=true",
+    "cy_run:ui": "cypress run --browser chrome --spec cypress/e2e/uiTests/*.js --env allure=true",
+    "cy_run:all": "cypress run --env allure=true",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots cypress/videos || true"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:cypress/recomended"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://greylis@bitbucket.org/greylis/frontend_js.git"
+  },
+  "author": "aleshin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/greylis/frontend_js/issues"
+  },
+  "homepage": "https://bitbucket.org/greylis/frontend_js#readme",
+  "dependencies": {
+    "@synthetixio/synpress": "^3.7.2-beta.9",
+    "imapflow": "^1.0.136",
+    "lodash": "^4.17.21",
+    "nodemailer": "^6.9.4"
+  }
+}
